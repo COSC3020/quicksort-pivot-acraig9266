@@ -40,8 +40,7 @@ F	T	T  Guaranteed good pivot
 F	T	F  Possible good pivot
 F	F	T  Possible good pivot
 F	F	F  Guaranteed bad pivot
-
+```
 4 guaranteed good pivot cases = 4 x .125 = 0.5
 3 possible good pivot cases = 3(number of cases) x .125(probabilty of case occuring) x 1/3(probability the good choice is the median) = 0.125
 P(good pivot using median-of-three) = 0.625
-```
