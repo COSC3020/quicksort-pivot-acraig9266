@@ -1,3 +1,4 @@
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
 # Quicksort Pivots
 
 In the lectures I only briefly mentioned strategies for determining a good pivot
@@ -20,7 +21,7 @@ Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
 
-# Analysis
+# Analysis and Reasoning
 The method of median of three would be slightly more likely than left-most is to select a good pivot.
 
 When 2 or more of three chosen elements are within the middle of the array values, it is impossible to pick a pivot which is not 
@@ -29,40 +30,21 @@ pivot. Thus, the probability of picking a good pivot is:
 
 P(2 elements within n/4 to 3n/4) + P(3 elements within n/4 to 3n/4) + P(1 element is in n/4 to 3n/4 and chosen as median of the three)
 
-Using a truth table, 8 possible cases with each case being equally likely.
-```math
-a	b	c  Each case has .125 chance of occuring .5 chance of good or bad on each element so 0.5x0.5x0.5  = 0.5^3 = 0.125
+Using a truth table, there are 8 possible cases with each case being equally likely.
 
-
-T	T	T  Guaranteed good pivot
-
-
-T	T	F  Guaranteed good pivot
-
-
-T	F	T  Guaranteed good pivot
-
-
-T	F	F  Possible good pivot
-
-
-F	T	T  Guaranteed good pivot
-
-
-F	T	F  Possible good pivot
-
-
-F	F	T  Possible good pivot
-
-
-F	F	F  Guaranteed bad pivot
-
+| a | b | c | Description                   |
+|---|---|---|-------------------------------|
+| T | T | T | Guaranteed good pivot         |
+| T | T | F | Guaranteed good pivot         |
+| T | F | T | Guaranteed good pivot         |
+| T | F | F | Possible good pivot           |
+| F | T | T | Guaranteed good pivot         |
+| F | T | F | Possible good pivot           |
+| F | F | T | Possible good pivot           |
+| F | F | F | Guaranteed bad pivot          |
 
 4 guaranteed good pivot cases = 4 x .125 = 0.5
 
-
-3 possible good pivot cases = 3(number of cases) x .125(probabilty of case occuring) x 1/3(probability the good choice is the median) = 0.125
-
+3 possible good pivot cases = 3(# of cases) x .125(prob of case occuring) x 1/3(prob the good choice is the median) = 0.125
 
 P(good pivot using median-of-three) = 0.625
-```
