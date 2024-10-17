@@ -45,6 +45,6 @@ Using a truth table, there are 8 possible cases with each case being equally lik
 
 4 guaranteed good pivot cases = 4 x .125 = 0.5
 
-3 possible good pivot cases = 3(# of cases) x .125(prob of case occuring) x 1/3(prob the good choice is the median) = 0.125
+3 possible good pivot cases = 3(# of cases) x .125(prob of case occuring) x 1/2(prob the good choice is the median) = 0.1875
 
-P(good pivot using median-of-three) = 0.625
+P(good pivot using median-of-three) = 0.6875
